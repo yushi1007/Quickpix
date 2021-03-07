@@ -1,0 +1,2 @@
+class OrderImagesController < ApplicationController
+end
