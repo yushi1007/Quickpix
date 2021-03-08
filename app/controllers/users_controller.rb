@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:login, :handle_login]
+    # skip_before_action :authorized, only: [:login, :handle_login]
     
     def login
     end
@@ -7,9 +7,9 @@ class UsersController < ApplicationController
     def handle_login
       @user = User.find_by(username: params[:username])
       if @user && @user.authenticate(params[:password])
-        redirect_to "/"
+        redirect_to user_path
       else
-        redirect_to login_path
+        redirect_to new_user_path
       end
     end
 

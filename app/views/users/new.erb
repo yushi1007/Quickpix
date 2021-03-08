@@ -1,0 +1,23 @@
+<!--<!DOCTYPE html>-->
+<!--<html></html>
+<head><title>Create Account</title>
+</head>
+<body>
+<div><h1>Create Account</h1>-->
+<div class="loginform">
+  <div class="formbox">
+    <%= form_for @user do |f| %>
+    <h4 class="logintext">Create Account</h4>
+        <%= f.text_field :username, class:"login-box",placeholder:"Username" %>
+        <br>
+        <%= f.text_field :name, class:"login-box",placeholder:"Name"%>
+        <br>
+        <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
+        <br>
+        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%>
+        <%= f.submit class:"login-button" %>
+    <% end %>
+<!--</div>
+
+</body>
+</html>-->
