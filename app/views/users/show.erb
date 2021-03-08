@@ -1,0 +1,6 @@
+<h1>Hello <%= @user.name %>!</h1>
+
+
+<% @user.images.each do |user|%>
+<img src = <%= user.url %> width="300" height="300" >
+<%end%>
