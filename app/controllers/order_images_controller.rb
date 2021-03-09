@@ -10,8 +10,15 @@ def new
 end
 
 def show
+    @order_image = @current_order_image
+  end
 
-end
+  def destroy
+    @order_image = @current_order_image
+    @order_image.destroy
+    session[:image_id] = nil
+    redirect_to images_path
+  end
 
 def create
     order_image = OrderImage.create(order_image_params) 

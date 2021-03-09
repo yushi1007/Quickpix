@@ -1,8 +1,6 @@
 <h1>Upload New Image</h1>
 
 <%= form_for @image do |f| %>
-<%= f.label "User:" %>
-<%= f.collection_select :user_id, @users, :id, :name %><br><br>
 <%= f.label "name:" %>
 <%= f.text_field :name %><br><br>
 <%= f.label "description:" %>

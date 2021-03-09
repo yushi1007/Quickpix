@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+
+      
     
         # # Allows current_user and logged_in? to be called in the html.erb files
         # helper_method :current_user, :logged_in?
@@ -23,4 +25,5 @@ class ApplicationController < ActionController::Base
         #     # Redirect to login page if not logged in 
         #     redirect_to login_path unless logged_in?
         # end
+    
 end

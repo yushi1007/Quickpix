@@ -65,10 +65,10 @@ Order.create(ordered: false, payment_method: "Apple Pay", user_id: 5)
 
 #####ORDERIMAGE#####
 
-OrderImage.create(quantity: 1, image_id: 1, order_id: 1)
-OrderImage.create(quantity: 1, image_id: 2, order_id: 2)
-OrderImage.create(quantity: 1, image_id: 3, order_id: 3)
-OrderImage.create(quantity: 1, image_id: 4, order_id: 4)
-OrderImage.create(quantity: 1, image_id: 5, order_id: 5)
+OrderImage.create(image_id: 1, order_id: 1)
+OrderImage.create(image_id: 2, order_id: 2)
+OrderImage.create(image_id: 3, order_id: 3)
+OrderImage.create(image_id: 4, order_id: 4)
+OrderImage.create(image_id: 5, order_id: 5)
 
 puts "📸📸📸📸📸SEEDED📸📸📸📸📸"

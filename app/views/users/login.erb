@@ -1,19 +1,12 @@
-<div class="loginform">
-  <div class="formbox">
-    <%= form_for "/handle_login" do |f| %>
-    <h4 class="logintext">Please Login Here:</h4>
-        <%= f.label "Username:", class: "col-sm-2 control-label" %><br>
-        <%= f.text_field :username, class:"login-box",placeholder:"user@mail.com" %>
-        <br>
-        <%= f.label "Password:", class: "col-sm-2 control-label" %><br>
-        <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
-        <br>
-        <%= f.submit "Sign In" %><br>
-    </div>
-</div>
-<div class="loginform bringitdown">
+
+
+<%= form_tag @users do %>
+    <%= label_tag :username, "Username" %><br>
+    <%= text_field_tag :username %><br><br>
+    <%= label_tag :password, "Password" %><br>
+    <%= password_field_tag :password %><br><br>
+    <%= submit_tag "Login" %><br>
+    <div class="loginform bringitdown">
 <h6>Don't have an account?</h6>
-<button class="searchbutton" style="width:80px;">Sign Up</button></a></div>
+<%= link_to "Sign Up", new_user_path %>
     <% end %>
-      </div>
-</div>

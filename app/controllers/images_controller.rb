@@ -15,9 +15,9 @@ class ImagesController < ApplicationController
     end
 
     def create
-       
+        user = User.find(session[:user_id])
         image = Image.create(image_params) 
-        redirect_to image_path(image)
+        redirect_to user_path(user)
     end
 
     private

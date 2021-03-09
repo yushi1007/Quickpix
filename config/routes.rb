@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   get "/login", to: "users#login", as: "login"
   post "/login", to: 'users#handle_login'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+# post 'order_images/:id/add' => "order_images#add_quantity", as: "image_add"
+# post 'order_images/:id/reduce' => "order_images#reduce_quantity", as: "image_reduce"
+# post 'order_images' => "order_images#create"
+# get 'order_images/:id' => "order_images#show", as: "image"
+# delete 'order_images/:id' => "order_images#destroy"
 end
