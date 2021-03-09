@@ -7,15 +7,19 @@
 <div class="loginform">
   <div class="formbox">
     <%= form_for @user do |f| %>
-    <h4 class="logintext">Create Account</h4>
-        <%= f.text_field :username, class:"login-box",placeholder:"Username" %>
-        <br>
-        <%= f.text_field :name, class:"login-box",placeholder:"Name"%>
-        <br>
+    <h4 class="logintext">Create Your Account</h4>
+        <%= f.label "Name:", class: "col-sm-2 control-label" %><br>
+        <%= f.text_field :name, class:"login-box",placeholder:"Full Name"%>
+        <br><br>
+        <%= f.label "Username:", class: "col-sm-2 control-label" %><br>
+        <%= f.text_field :username, class:"login-box",placeholder:"user@mail.com" %>
+        <br><br>
+        <%= f.label "Password:", class: "col-sm-2 control-label" %><br>
         <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
-        <br>
-        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%><br>
-        <%= f.submit class:"login-button" %><br>
+        <br><br>
+        <%= f.label "Confirm Password:", class: "col-sm-2 control-label" %><br>
+        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%><br><br>
+        <%= f.submit class:"login-button" %><br><br>
     <% end %>
 <!--</div>
 

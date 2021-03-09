@@ -5,13 +5,17 @@ class ImagesController < ApplicationController
     
     def show
         @image = Image.find(params[:id])
+        # @users = User.all 
     end
 
     def new
         @image = Image.new
+        @tags = Tag.all
+        @users = User.all
     end
 
     def create
+       
         image = Image.create(image_params) 
         redirect_to image_path(image)
     end

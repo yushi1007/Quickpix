@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+    
+
     def index
         @orders = Order.all
     end
@@ -12,13 +14,14 @@ class OrdersController < ApplicationController
     end
 
     def create
-        order = User.create(order_params) 
+        order = Order.create(order_params)
+        
         redirect_to order_path(order)
     end
 
     private
 
     def order_params
-        params.require(:order).permit(ordered: false, :payment_method, :user_id)
+        params.require(:order).permit(:ordered, :payment_method, :user_id)
     end
 end
