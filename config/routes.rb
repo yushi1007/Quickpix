@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   get "/login", to: "users#login", as: "login"
   post "/login", to: 'users#handle_login'
+  delete "/logout", to: "users#logout"
+  delete "/order_images", to: "order_images#destroy", as: "clean"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 # post 'order_images/:id/add' => "order_images#add_quantity", as: "image_add"

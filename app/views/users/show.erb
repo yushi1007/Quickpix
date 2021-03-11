@@ -1,3 +1,4 @@
+
 <h1><%= @user.name %></h1>
 
 <% @user.images.each do |user|%>
@@ -7,5 +8,6 @@
 <hr>
 <%= link_to "My Account", edit_user_path(@user)%>
 <%= link_to "Upload", new_image_path %>
+<%= link_to "Explore", images_path%>
 
 

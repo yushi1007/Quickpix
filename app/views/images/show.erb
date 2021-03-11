@@ -21,7 +21,12 @@ Photo Submitted by: <%=link_to @image.user.name, user_path(@image.user_id)%>
               </tr>
             </table>
           </div>
-          <hr>
+          <hr>      
 
-          <%= button_to 'Add To Cart'%>
+          <%= button_to 'Add to Cart', {:controller => "order_images", 
+                       :action => "create", 
+                       :image_id => @image.id, 
+                       :order_id => @order.id,
+                       :method => "post"}, class: "btn btn-primary btn-lg"%>
+                       
 <!--<%= @image.description %>-->

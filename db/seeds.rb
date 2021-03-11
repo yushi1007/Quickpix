@@ -34,9 +34,9 @@ palmtree = Image.create(name: "Palmtree", description: "Tree", price: 100, url: 
 frog = Image.create(name: "Frog", description: "Green frog", price: 80, url: "https://images.unsplash.com/photo-1545006398-2cf47cd87b90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=915&q=80", user_id: 4)
 cheery_blossom = Image.create(name: "Cheery Blossom", description: "Flower", price: 60, url: "https://images.unsplash.com/photo-1614535675189-6649712cec83?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=962&q=80", user_id: 5)
 beach = Image.create(name: "Beach", description: "Aerial beach photo", price: 40, url: "https://images.unsplash.com/photo-1613307378200-0b366638a906?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80", user_id: 2)
-#rush_hour = Image.create(name: "Rush Hour", description: "Times Square Rush Hour", price: 100, url: "/app/assets/images/rush-hour.JPG", user_id: 1)
-#rush_hour = Image.create(name: "Rush Hour", description: "Times Square Rush Hour", price: 100, url: "https://imgur.com/a/60Qe82h", user_id: 1)
-#rush_hour = Image.create(name: "Rush Hour", description: "Times Square Rush Hour", price: 100, url: "https://imgur.com/a/60Qe82h", user_id: 1)
+#rush_hour = Image.create(name: "Rush Hour", description: "Times Square Rush Hour", price: 100, url: "/app/assets/images/rush-hour.JPG", user_id: 3)
+#rush_hour = Image.create(name: "Rush Hour", description: "Times Square Rush Hour", price: 100, url: "https://imgur.com/a/60Qe82h", user_id: 4)
+#rush_hour = Image.create(name: "Rush Hour", description: "Times Square Rush Hour", price: 100, url: "https://imgur.com/a/60Qe82h", user_id: 5)
 
 
 #####TAG#####
@@ -57,18 +57,18 @@ flower_tag = ImageTag.create(tag_id: 2, image_id: 4)
 
 #####ORDER#####
 
-Order.create(ordered: false, payment_method: "Paypal", user_id: 1)
-Order.create(ordered: false, payment_method: "VISA", user_id: 2)
-Order.create(ordered: false, payment_method: "Mastercard", user_id: 3)
-Order.create(ordered: false, payment_method: "Paypal", user_id: 4)
-Order.create(ordered: false, payment_method: "Apple Pay", user_id: 5)
+# Order.create(ordered: false, payment_method: "Paypal", user_id: 1)
+# Order.create(ordered: false, payment_method: "VISA", user_id: 2)
+# Order.create(ordered: false, payment_method: "Mastercard", user_id: 3)
+# Order.create(ordered: false, payment_method: "Paypal", user_id: 4)
+# Order.create(ordered: false, payment_method: "Apple Pay", user_id: 5)
 
 #####ORDERIMAGE#####
 
-OrderImage.create(image_id: 1, order_id: 1)
-OrderImage.create(image_id: 2, order_id: 2)
-OrderImage.create(image_id: 3, order_id: 3)
-OrderImage.create(image_id: 4, order_id: 4)
-OrderImage.create(image_id: 5, order_id: 5)
+# OrderImage.create(image_id: 1, order_id: 1)
+# OrderImage.create(image_id: 2, order_id: 2)
+# OrderImage.create(image_id: 3, order_id: 3)
+# OrderImage.create(image_id: 4, order_id: 4)
+# OrderImage.create(image_id: 5, order_id: 5)
 
 puts "📸📸📸📸📸SEEDED📸📸📸📸📸"
