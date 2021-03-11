@@ -1,9 +1,9 @@
-<!--<!DOCTYPE html>-->
-<!--<html></html>
-<head><title>Create Account</title>
-</head>
-<body>
-<div><h1>Create Account</h1>-->
+
+<% if @error_message%>
+<ul>
+<li class="error"><%= @error_message%></li>
+<%end%>
+</ul>
 <div class="loginform">
   <div class="formbox">
     <%= form_for @user do |f| %>
@@ -21,7 +21,3 @@
         <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%><br><br>
         <%= f.submit class:"login-button" %><br><br>
     <% end %>
-<!--</div>
-
-</body>
-</html>-->

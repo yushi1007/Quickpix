@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:login, :handle_login]
+    skip_before_action :authorized, only: [:login, :handle_login, :new, :create]
+
+
+
     def show
       @user = User.find(params[:id])
       @error_message = flash[:error_message]
@@ -9,7 +12,8 @@ class UsersController < ApplicationController
       @error_message = flash[:error_message]
     end
   
-  def handle_login 
+  def handle_login
+    #byebug 
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       flash[:success] = "Welcome back, #{@user.name}!"
@@ -31,14 +35,19 @@ end
     def new 
       @error_message = flash[:error_message]
       @user = User.new
-    
     end
 
     def create
-      user = User.create(user_params) 
-      @error_message = flash[:error_message]
-      redirect_to user_path(user)
+      # byebug
+      @user = User.create(user_params) 
+      if @user.valid?
+      session[:user] = @user.id 
+      redirect_to user_path(@user)
+      else
+      flash[:error_message] = @user.errors.full_messages
+        redirect_to new_user_path 
     end
+  end 
 
     def edit
       @user = User.find(params[:id])

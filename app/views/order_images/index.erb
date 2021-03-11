@@ -6,6 +6,8 @@
         <h6>Description: <%= o.image.description%></h6>
         <h6>Price: <%= o.image.price%></h6>
 <%= link_to "Remove from cart", o ,method: :delete%>
-<%= link_to "Checkout", new_order_path %>
+<%= link_to "Checkout", new_order_path %><br><br>
 
 <%end%>
+
+<%= link_to "Shop for more images", images_path%>

@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
         before_action :authorized
 
         def current_user
+                #byebug
             # Find the AR instance associated with the ID in session
             @current_user ||= User.find_by(id: session[:user_id])
         end

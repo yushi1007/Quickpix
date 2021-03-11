@@ -1,42 +1,27 @@
 <h1>Upload New Image</h1>
-
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+           <li class="error"> <%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
 <%= form_for @image do |f| %>
 <%= f.label "name:" %>
 <%= f.text_field :name %><br><br>
 <%= f.label "description:" %>
-<%= f.text_field :description %><br><br>
+<%= f.text_area :description %><br><br>
 <%= f.label "price:" %>
-<%= f.number_field :price %><br><br>
+<%= f.text_field :price %><br><br>
 <%= f.label "url:" %>
 <%= f.text_field :url %><br><br>
 <%= f.label "tag:" %>
 <%= f.collection_select :image_tag_ids, @tags, :id, :tag %><br><br>
-<%= f.submit "Submit" %>
+<%= f.submit "Submit" %> 
 <% end %>
+
 
   
   
   
   
-  <!--<div class="loginform">
-  <div class="formbox">
-  
-    <%= form_for @users do |f| %>
-    <h4 class="logintext">Please Login Here:</h4>
-        <%= f.label "Username:", class: "col-sm-2 control-label" %><br>
-        <%= f.text_field :username, class:"login-box",placeholder:"user@mail.com" %>
-        <br>
-        <%= f.label "Password:", class: "col-sm-2 control-label" %><br>
-        <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
-        <br>
-        <%= f.submit "Sign In" %><br>
-    </div>
-</div>
-<div class="loginform bringitdown">
-<h6>Don't have an account?</h6>
-<button class="searchbutton" style="width:80px;">Sign Up</button></a></div>
-    <% end %>
-      </div>
-</div>
-<%= f.label "User:" %>
-<%= f.collection_select :user_id, @users, :id, :name %><br><br>-->
