@@ -1,0 +1,32 @@
+<!--<h1> <%= @image.name %> </h1>-->
+
+<img src= <%= @image.url %>width="300" height="400" ><br>
+Photo Submitted by: <%=link_to @image.user.name, user_path(@image.user_id)%>
+
+ <div class="col-sm-6">
+          <h1><%=@image.name%></h1>
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <td>Price:</td>
+                <td>$<%= @image.price %></td>
+              </tr>
+              <tr>
+                <td>Tag:</td>
+                <td><%= @image.tags.pluck(:tag).join(", ")%></td>
+              </tr>
+              <tr>
+                <td>Description:</td>
+                <td> <%= @image.description %></td>
+              </tr>
+            </table>
+          </div>
+          <hr>      
+
+          <%= button_to 'Add to Cart', {:controller => "order_images", 
+                       :action => "create", 
+                       :image_id => @image.id, 
+                       :order_id => @order.id,
+                       :method => "post"}, class: "btn btn-primary btn-lg"%>
+                       
+<!--<%= @image.description %>-->

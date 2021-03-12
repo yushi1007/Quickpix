@@ -54,18 +54,18 @@ flower_tag = ImageTag.create(tag_id: 2, image_id: 4)
 
 #####ORDER#####
 
-Order.create(ordered: false, payment_method: "Paypal", user_id: 1)
-Order.create(ordered: false, payment_method: "VISA", user_id: 2)
-Order.create(ordered: false, payment_method: "Mastercard", user_id: 3)
-Order.create(ordered: false, payment_method: "Paypal", user_id: 4)
-Order.create(ordered: false, payment_method: "Apple Pay", user_id: 5)
+# Order.create(ordered: false, payment_method: "Paypal", user_id: 1)
+# Order.create(ordered: false, payment_method: "VISA", user_id: 2)
+# Order.create(ordered: false, payment_method: "Mastercard", user_id: 3)
+# Order.create(ordered: false, payment_method: "Paypal", user_id: 4)
+# Order.create(ordered: false, payment_method: "Apple Pay", user_id: 5)
 
 #####ORDERIMAGE#####
 
-OrderImage.create(quantity: 1, image_id: 1, order_id: 1)
-OrderImage.create(quantity: 1, image_id: 2, order_id: 2)
-OrderImage.create(quantity: 1, image_id: 3, order_id: 3)
-OrderImage.create(quantity: 1, image_id: 4, order_id: 4)
-OrderImage.create(quantity: 1, image_id: 5, order_id: 5)
+# OrderImage.create(image_id: 1, order_id: 1)
+# OrderImage.create(image_id: 2, order_id: 2)
+# OrderImage.create(image_id: 3, order_id: 3)
+# OrderImage.create(image_id: 4, order_id: 4)
+# OrderImage.create(image_id: 5, order_id: 5)
 
 puts "📸📸📸📸📸SEEDED📸📸📸📸📸"

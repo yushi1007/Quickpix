@@ -1,0 +1,19 @@
+
+<h4>Please Login Here</h4>
+
+<%if @error_message%>
+<ul>
+  <li class="error"> <%= @error_message %></li>
+<%end%>
+</ul>
+
+<%= form_tag @users do %>
+    <%= label_tag :username, "Username" %><br>
+    <%= text_field_tag :username %><br><br>
+    <%= label_tag :password, "Password" %><br>
+    <%= password_field_tag :password %><br><br>
+    <%= submit_tag "Login" %><br>
+    <div class="loginform bringitdown">
+    <h6>Don't have an account?</h6>
+<h5 class="signuptext" style="width:100px;"><%= link_to "Sign Up", new_user_path %></h5>
+    <% end %>

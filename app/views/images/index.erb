@@ -1,0 +1,9 @@
+<h1>Explore Quickpix Artists:</h1>
+
+<% @images.each do |image|%>
+
+<%= link_to image_tag(image.url, :size => "300x400"), image%>
+
+<!--<img src = <%= image.url %> width="300" height="300">-->
+<%end%>
+
