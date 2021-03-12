@@ -18,13 +18,13 @@ class ImagesController < ApplicationController
     def create
         user = User.find(session[:user_id])
         image = Image.create(image_params) 
-        if image.valid?
-        redirect_to user_path(user)
-        else
-        flash[:errors] = image.errors.full_messages
-        redirect_to new_image_path    
+        # if image.valid?
+        # redirect_to user_path(user)
+        # else
+        # flash[:errors] = image.errors.full_messages
+        redirect_to images_path   
     end
-end
+
 
     private
 

@@ -15,8 +15,13 @@ def show
 
   def destroy
     Order.last.order_images.destroy_all
-    redirect_to orders_path
+    redirect_to order_images_path
   end
+
+  def submit
+    Order.last.order_images.destroy_all
+    redirect_to orders_path
+  end 
 
 def create
     order_image = OrderImage.create(image_id: params[:image_id], order_id: params[:order_id])

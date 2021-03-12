@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post "/login", to: 'users#handle_login'
   # get "/signup", to: 'users#signup', as: "signup"
   delete "/logout", to: "users#logout"
-  delete "/order_images", to: "order_images#destroy", as: "clean"
+  delete "/order_images", to: "order_images#submit", as: "clean"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 

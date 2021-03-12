@@ -15,8 +15,7 @@
 <%= f.text_field :price %><br><br>
 <%= f.label "url:" %>
 <%= f.text_field :url %><br><br>
-<%= f.label "tag:" %>
-<%= f.collection_select :image_tag_ids, @tags, :id, :tag %><br><br>
+
 <%= f.submit "Submit" %> 
 <% end %>
 
