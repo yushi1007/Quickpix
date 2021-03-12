@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-    
+    #Hello World
 
     def index
         @orders = Order.all
@@ -15,7 +15,6 @@ class OrdersController < ApplicationController
 
     def create
         order = Order.create(order_params)
-        
         redirect_to order_path(order)
     end
 
