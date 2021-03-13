@@ -2,7 +2,6 @@ class UsersController < ApplicationController
     skip_before_action :authorized, only: [:login, :handle_login, :new, :create]
 
 
-
     def show
       @user = User.find(params[:id])
       @error_message = flash[:error_message]
@@ -28,7 +27,7 @@ end
 
     def logout
         session[:user_id] = nil
-        Order.last.destroy
+        #Order.last.destroy
         redirect_to login_path
     end
 

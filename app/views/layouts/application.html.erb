@@ -19,13 +19,12 @@
   <!-- Navbar content -->
   <% if logged_in? %>
   <div class="text-right mb-3">
-   <%= button_to "Logout", "/logout", method: "delete", class: "btn btn-dark float-right" %></div></nav>
+   <%= button_to "Logout", "/logout", method: "delete", class: "btn btn-dark float-right" %></div>
           <p><%= current_user.name %></p> 
             <% else %>
-                 <p>You are NOT logged in </p>            
+                 <p></p>            
             <% end %>
-  <div class="container">
     <%= yield %>
-  </div></body>
+  </body>
 
 </html>

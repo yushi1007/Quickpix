@@ -5,13 +5,14 @@ Rails.application.routes.draw do
   resources :tags
   resources :orders
   resources :users
-
-  get "/login", to: "users#login", as: "login"
+  root to: "application#index"
+  get "/login", to: "users#login", as: "index"
   post "/login", to: 'users#handle_login'
   # get "/signup", to: 'users#signup', as: "signup"
   delete "/logout", to: "users#logout"
   delete "/order_images", to: "order_images#submit", as: "clean"
 
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 # post 'order_images/:id/add' => "order_images#add_quantity", as: "image_add"

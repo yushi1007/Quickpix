@@ -6,7 +6,11 @@ class ApplicationController < ActionController::Base
         # Except for the ones with `skip_before_action :authorized`
 
         # Any instance variable saved carries on through after a before_action
-        before_action :authorized
+        #before_action :authorized
+        before_action :authenticate_user!, except: :index
+        def index
+
+        end
 
         def current_user
                 #byebug
