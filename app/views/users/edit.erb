@@ -1,20 +1,23 @@
-<h1>Account Management</h1>
+<h4 class="account-page">Account Management</h4>
 <hr>
-
+    <div class="edit-form">
+    <div class="edit-box">
     <%= form_for @user do |f| %>
-    <h4>Edit Your Account</h4>
-        <%= f.label "Name:", class: "col-sm-2 control-label" %><br>
+    <h4 class="edit-text">Edit Your Account</h4>
+        <%= f.label "Name:" %><br>
         <%= f.text_field :name, class:"login-box",placeholder:"Full Name"%>
-        <br><br>
-        <%= f.label "Username:", class: "col-sm-2 control-label" %><br>
+        <br>
+        <%= f.label "Username:" %><br>
         <%= f.text_field :username, class:"login-box",placeholder:"user@mail.com" %>
-        <br><br>
-        <%= f.label "Password:", class: "col-sm-2 control-label" %><br>
+        <br>
+        <%= f.label "Password:" %><br>
         <%= f.password_field :password, class:"login-box",placeholder:"Password"%>
-        <br><br>
-        <%= f.label "Confirm Password:", class: "col-sm-2 control-label" %><br>
-        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%><br><br>
-        <%= f.submit class:"login-button" %><br><br>
+        <br>
+        <%= f.label "Confirm Password:" %><br>
+        <%= f.password_field :password_confirmation, class:"login-box",placeholder:"Password Confirmation"%><br>
+        <%= f.submit class:"login-button" %><br>
     <% end %>
-
-<%= button_to 'Delete Account', @user, :method => :delete%>
+<div class="delete-button">
+<%= button_to 'Delete Account', @user, :method => :delete%></div>
+    </div>
+    </div>

@@ -13,6 +13,27 @@
  *= require_tree .
  *= require_self
  */
+ /* .container {
+     width: 200vw;
+     height: auto;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: -20;
+     padding: 0;
+     margin: 0;
+ } */
+
+.background { 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -20;
+    min-width: 1000px;
+}
 
 .error{
     color: red;
@@ -31,5 +52,433 @@
     padding-right: 1px;
     outline: none;
 }
-    
- 
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #4f5b66;
+    height: auto;
+    width: 100vw;
+    padding-top: 5px;
+    color: #fff;
+}
+
+.foot-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.foot-content h4{
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.foot-content span{
+    font-weight: bold;
+    width: 100%;
+    color: #007AF3;
+}
+
+.foot-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 15px;
+}
+
+.foot-content span{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+}
+
+.foot-text h5 {
+    width: 100%;
+    color: aqua;
+    margin: 5px auto;
+    line-height: 1px;
+    font-size: small;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+    padding-top: 1px;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.socials a i{ 
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.social a:hover i{
+    color: aqua;
+}
+
+body {
+    background: #F2F2F2;
+    margin: 0;
+}
+
+/*.navbar {
+    background: #e3f2fd;
+    position: absolute;
+    border: 0px;
+    padding: 1em;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}*/
+
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
+
+.logo span {
+color: #007AF3;
+}
+
+nav {
+    /*display: none;*/
+}
+
+section {
+    padding: 5em 2em;
+}
+
+.hero {
+    text-align: center;
+}
+
+.subhead {
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: .3em;
+    padding-top: 10vh;
+}
+
+.left-col h2 {
+    font-size: 2.5em;
+    font-weight: bolder;
+    line-height: 1.3em;
+    margin-top: .2em;
+}
+
+
+.hero-cta a {
+    background: #007AF3;
+    font-size: xx-large;
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: .2em 1.0em;
+    border-radius: 5em;
+    display: inline-block;
+    transition: 1s;
+}
+
+.hero-cta a:hover {
+    background:cadetblue;
+}
+
+.hero-cta h3 {
+    background: #16c79a;
+    font-size: xx-large;
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: .2em 1.0em;
+    border-radius: 5em;
+    display: inline-block;
+    transition: 1s;
+}
+
+.hero-cta h3:hover {
+    background:#a2d5f2;
+    transform: scale(1.03);
+    letter-spacing: 4px;
+}
+
+.navbar {
+    background: lightblue;
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    width: 100%;
+    right: 0;
+    top: 0;
+    height: 50px;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.navbar div:nth-child(2) a {
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 1s;
+}
+.navbar div:nth-child(2) a:hover {
+color: white;
+}
+
+
+.navbar div:nth-child(2) a:nth-child(2) {
+   color: black;
+   background: white;
+   padding: .2em 1.0em;
+   border-radius: 5em;
+   display: inline-block;
+   transition: 1s;
+}
+
+.navbar div:nth-child(2) a:nth-child(2):hover {
+    color:white;
+    background: black;
+ }
+
+ .navbar div:nth-child(2) a:nth-child(3){
+    color: black;
+    background: grey;
+    padding: .2em 1.0em;
+    border-radius: 5em;
+    display: inline-block;
+     transition: 1s;
+ }
+
+ .navbar div:nth-child(2) a:nth-child(3):hover {
+    color: aqua;
+    background:white;
+ }
+
+ .formbox { 
+    margin-top: 7vh;
+    background: white;
+    opacity: 0.9;
+    padding-right: 80px;
+    padding-left: 80px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+ }
+
+ label {
+     width: 100%;
+     text-align: center;
+ }
+
+ .loginform {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .signupform {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .login-text {
+    width: 100%;
+    border-bottom: 2px solid black;
+    line-height: 30px;
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+ }
+
+ .logintext {
+    border-bottom: 2px solid black;
+    line-height: 30px;
+    width: 100%;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+ }
+
+ .login-box {
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 5px;
+    font-size: 11pt;
+    background: transparent;
+    transition: 1s;
+    width: 100%;
+    outline: none;
+  }
+
+.signup-form {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.login-button {
+    width: 100%;
+    background-color: rgb(48,172,251);
+    color: white;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 5px;
+    font-size: 15pt;
+    font-weight: 700;
+    transition: 1s;
+    outline: none;
+}
+
+.login-button:hover {
+    transform: scale(1.03);
+    letter-spacing: 4px;
+  }
+
+.signup-cta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1px;
+  }
+  
+
+.signup-cta a {
+    background-color: rgb(48,172,251);
+    font-size: large;
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: .2em 1.0em;
+    border-radius: 5em;
+    display: inline-block;
+    transition: 1s;
+}
+
+.signup-cta a:hover {
+    background: #6ddccf;
+}
+
+.signup-text { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.edit-box { 
+    background: white;
+    opacity: 0.9;
+    padding-right: 80px;
+    padding-left: 80px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+ }
+
+ .edit-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .edit-text {
+    width: 100%;
+    border-bottom: 2px solid black;
+    line-height: 30px;
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vh;
+ }
+
+ .delete-button {
+    padding: 0;
+    border: none;
+    background: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .account-page {
+     width: 100%;
+     margin-top: 5vh;
+     font-weight: bolder;
+     margin-bottom: 0;
+     align-items: center;
+     display: flex;
+     justify-content: center;
+     
+ }
+/* .primary-nav {
+    list-style: none;
+}
+.primary-nav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.primary-nav li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.secondary-nav {
+    list-style: none;
+}
+
+.secondary-nav a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+} */
+
+
+
+
+
+
+
+

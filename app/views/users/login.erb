@@ -1,19 +1,28 @@
 
-<h4>Please Login Here</h4>
 
-<%if @error_message%>
-<ul>
-  <li class="error"> <%= @error_message %></li>
-<%end%>
-</ul>
 
+<div class="loginform">
+<div class="formbox">
+<h4 class=login-text>Please Login Here</h4>
 <%= form_tag @users do %>
     <%= label_tag :username, "Username" %><br>
-    <%= text_field_tag :username %><br><br>
+    <%= text_field_tag :username, "",class:"login-box",placeholder:"user@email.com" %><br><br>
     <%= label_tag :password, "Password" %><br>
-    <%= password_field_tag :password %><br><br>
-    <%= submit_tag "Login" %><br>
-    <div class="loginform bringitdown">
-    <h6>Don't have an account?</h6>
-<h5 class="signuptext" style="width:100px;"><%= link_to "Sign Up", new_user_path %></h5>
+    <%= password_field_tag :password, "", class:"login-box", placeholder:"Password" %><br><br>
+    <%= submit_tag "Login", class:"login-button" %><br><br>
+    <div class="signup-text">
+    <a>Don't have an account?</a><br/><br/>
+    </div>
+    <div class="signup-cta">
+<%= link_to "Sign Up", new_user_path %></div>
     <% end %>
+
+
+    <%if @error_message%>
+<ul>
+    <li class="error"> <%= @error_message %></li>
+    <%end%>
+
+</ul>
+</div>
+</div>

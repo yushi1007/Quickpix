@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "/login", to: "users#login", as: "index"
   post "/login", to: 'users#handle_login'
   # get "/signup", to: 'users#signup', as: "signup"
-  delete "/logout", to: "users#logout"
+  delete "/logout", to: "users#logout", as: "logout"
   delete "/order_images", to: "order_images#submit", as: "clean"
 
   

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         @order = Order.create(ordered: false, user_id: @user.id)
         redirect_to user_path(@user)
     else 
-      flash[:error_message] = "Incorrect username or password. Please try again."
+      flash[:error_message] = "Incorrect username or password"
       redirect_to login_path
     end 
 end
