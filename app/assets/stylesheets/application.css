@@ -474,11 +474,17 @@ color: white;
      grid-gap: 1.5rem;
  }
 
+ .image {
+    height: 350px;
+    margin: 2px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+ }
+
  .image-container a img{
-     object-fit: cover;
-     overflow: hidden;
-     width: 100%;
-     height:350px;
+    width: 350px;
+    height: 100%;
  }
 
 .page-layout {
