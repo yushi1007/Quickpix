@@ -23,16 +23,13 @@ Tag.reset_pk_sequence
 
 yu = User.create(name: "Yu", username: "yushiys95@gmail.com", password: "Abc123")
 doug = User.create(name: "Doug", username: "doug@gmail.com", password: "Abc321")
-jason = User.create(name: "Jason", username: "jason@gmail.com", password: "Cba123")
-tony = User.create(name: "Tony", username: "tony@gmail.com", password: "123456")
-jeff = User.create(name: "Jeff", username: "jeff@gmail.com", password: "654321")
 
 #####IMAGE#####
 
 giraffe = Image.create(name: "Giraffe", description: "Animal", price: 50 , url: "https://images.unsplash.com/photo-1614075373917-05d44ee2722e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80", user_id: 1)
-palmtree = Image.create(name: "Palmtree", description: "Tree", price: 100, url: "https://images.unsplash.com/photo-1612841857676-2d3320630167?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80", user_id: 3)
-frog = Image.create(name: "Frog", description: "Green frog", price: 80, url: "https://images.unsplash.com/photo-1545006398-2cf47cd87b90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=915&q=80", user_id: 4)
-cheery_blossom = Image.create(name: "Cheery Blossom", description: "Flower", price: 60, url: "https://images.unsplash.com/photo-1614535675189-6649712cec83?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=962&q=80", user_id: 5)
+palmtree = Image.create(name: "Palmtree", description: "Tree", price: 100, url: "https://images.unsplash.com/photo-1612841857676-2d3320630167?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80", user_id: 1)
+frog = Image.create(name: "Frog", description: "Green frog", price: 80, url: "https://images.unsplash.com/photo-1545006398-2cf47cd87b90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=915&q=80", user_id: 2)
+cheery_blossom = Image.create(name: "Cheery Blossom", description: "Flower", price: 60, url: "https://images.unsplash.com/photo-1614535675189-6649712cec83?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=962&q=80", user_id: 1)
 beach = Image.create(name: "Beach", description: "Aerial beach photo", price: 40, url: "https://images.unsplash.com/photo-1613307378200-0b366638a906?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80", user_id: 2)
 
 
@@ -46,11 +43,11 @@ animal = Tag.create(tag: "Animal")
 
 #####IMAGE TAG#####
 
-landscape_tag = ImageTag.create(tag_id: 1, image_id: 5)
-frog_tag = ImageTag.create(tag_id: 3, image_id: 3)
-animal_tag = ImageTag.create(tag_id: 5, image_id: 1)
-tree_tag = ImageTag.create(tag_id: 4, image_id: 2)
-flower_tag = ImageTag.create(tag_id: 2, image_id: 4)
+# landscape_tag = ImageTag.create(tag_id: 1, image_id: 5)
+# frog_tag = ImageTag.create(tag_id: 3, image_id: 3)
+# animal_tag = ImageTag.create(tag_id: 5, image_id: 1)
+# tree_tag = ImageTag.create(tag_id: 4, image_id: 2)
+# flower_tag = ImageTag.create(tag_id: 2, image_id: 4)
 
 #####ORDER#####
 

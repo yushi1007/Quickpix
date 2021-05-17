@@ -32,7 +32,7 @@
     left: 0;
     width: 100vw;
     z-index: -20;
-    min-width: 1000px;
+    min-width: 1400px;
 }
 
 .error{
@@ -54,7 +54,7 @@
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -168,6 +168,7 @@ nav {
 
 section {
     padding: 5em 2em;
+    height: 100vh;
 }
 
 .hero {
@@ -295,6 +296,7 @@ color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
  }
 
  .signupform {
@@ -302,6 +304,7 @@ color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
  }
 
  .login-text {
@@ -412,6 +415,7 @@ color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
  }
 
  .edit-text {
@@ -447,6 +451,34 @@ color: white;
      justify-content: center;
      
  }
+
+ .image-container{
+     height: auto;
+     min-height: 100vh;
+     width: 80%;
+     margin: 20px auto;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-gap: 10px;
+
+ }
+
+ .image-container a img{
+     
+     object-fit: cover;
+
+ }
+
+.image {
+    overflow: hidden;
+    width: 100%;
+    height:400px;
+}
+
+.page-layout {
+    height: auto;
+    width: 100%;
+}
 /* .primary-nav {
     list-style: none;
 }
@@ -475,7 +507,15 @@ color: white;
     font-weight: bold;
 } */
 
+@media only screen and (max-width: 780px){
+    .image-container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        margin: 10px auto;
+    } 
 
+
+}
 
 
 

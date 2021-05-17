@@ -9,11 +9,11 @@ Photo Submitted by: <%=link_to @image.user.name, user_path(@image.user_id)%>
             <table class="table">
               <tr>
                 <td>Price:</td>
-                <td>$<%= @image.price %></td>
+                <td>$<%=@image.price%></td>
               </tr>
               <tr>
                 <td>Tag:</td>
-                <td><%= @image.tags.pluck(:tag).join(", ")%></td>
+                <td><%=@image.tags.pluck(:tag).join(", ")%></td>
               </tr>
               <tr>
                 <td>Description:</td>

@@ -38,13 +38,18 @@
             <div>
             <a href="/images">Explore</a>
             <%= link_to "Logout", logout_path, method: "delete" %>
+             <%= link_to current_user.name, user_path(current_user.id) %>
             </div>
         </div>
-          <p>Welcome <%= current_user.name %></p> 
-          
+                    <div class="page-layout">
+            <p>Welcome <%= current_user.name %></p>
+                 <%# <p></p> %>
+            </div> 
             <% else %>
-                 <p></p>            
+
             <% end %>
+           
+         
     <%= yield %>
   </body>
            <footer>
