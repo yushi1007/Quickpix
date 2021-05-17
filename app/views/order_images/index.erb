@@ -1,13 +1,15 @@
+<div class="cart-page">
 <h1>Cart:</h1>
 
 <% @order_images.each do |o|%>
         <%= image_tag(o.image.url, :size => "300x400")%>
         <h6>Name: <%= o.image.name%></h6>
         <h6>Description: <%= o.image.description%></h6>
-        <h6>Price: <%= o.image.price%></h6>
+        <h6>Price: $<%= o.image.price%></h6>
 <%= link_to "Remove from cart", o ,method: :delete%>
 <%= link_to "Checkout", new_order_path %><br><br>
 
 <%end%>
 
 <%= link_to "Shop for more images", images_path%>
+</div>
