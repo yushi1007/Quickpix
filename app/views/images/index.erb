@@ -4,7 +4,7 @@
     <div class="image-container">
             <% @images.each do |image|%>
         <div class="image">
-            <%= link_to image_tag(image.url, :size => "300x400"), image%>
+            <%= link_to image_tag(image.url), image%>
         </div>
     <!--<img src = <%= image.url %> width="300" height="300">-->
     <%end%>
