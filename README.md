@@ -1,25 +1,32 @@
-# README
+# Quickpix - A Rails application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Quickpix is a place helps artists to sell their photos
 
-Things you may want to cover:
+### [Backend](http://sungithub.com/yushi1007/QuickPix/tree/main/app/views) | [Frontend](https://github.com/yushi1007/QuickPix) | [Website](https://calm-stream-16658.herokuapp.com/)
 
-* Ruby version
+# Technologies Used
 
-* System dependencies
+- Ruby on Rails
 
-* Configuration
+# Git Clone
 
-* Database creation
+- You can git clone our repo link in the above (Fork and git clone the main branch)
+- Run the ‘bundle install’ -> ‘rails db:migrate’ -> ‘rails db:seed’ -> ‘rails s’
+- Go the website http://localhost:3000/login
+- Sign up your account if you don’t have an account
+- Login your account
+- You can start to edit your account, upload your photos, and check out the other artists’ photos
+- Logout after you finish using the application yushi1007/Quickpix Phase 2 Project Language Ruby
 
-* Database initialization
+## Creator
 
-* How to run the test suite
+👤 **Yu Shi & Doug Kerzner**
 
-* Services (job queues, cache servers, search engines, etc.)
+- Github:[@YUSHI](https://github.com/yushi1007) 
+- Linked:[LinkedIn](https://www.linkedin.com/in/yushi95/)
+- Github:[@DOUGKERZNER](https://github.com/DkFresh89) 
+- Linked:[LinkedIn](https://www.linkedin.com/in/douglas-kerzner)
 
-* Deployment instructions
+## Support
 
-* ...
-# Quickpix
+Please give a ⭐️ if you like this project, thank you!
