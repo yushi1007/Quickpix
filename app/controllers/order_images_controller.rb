@@ -25,7 +25,6 @@ def show
 
 def create
     order_image = OrderImage.create(image_id: params[:image_id], order_id: params[:order_id])
-    #byebug
     redirect_to order_images_path
 end
 
