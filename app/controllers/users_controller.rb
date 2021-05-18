@@ -26,7 +26,6 @@ end
 
     def logout
         session[:user_id] = nil
-        #Order.last.destroy
         redirect_to login_path
     end
 
