@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     end
   
   def handle_login
-    #byebug 
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       flash[:success] = "Welcome back, #{@user.name}!"

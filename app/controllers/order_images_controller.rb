@@ -45,7 +45,6 @@ end
 
 private
 # def order_image_params
-#     #byebug
 #     params.require(:order_image).permit(:image_id, :order_id)
 # end
 
