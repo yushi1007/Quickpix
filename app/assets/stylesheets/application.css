@@ -591,33 +591,6 @@ min-height: 100vh;
     font-weight: 600;
     padding: 5px 10px;
 }
-/* .primary-nav {
-    list-style: none;
-}
-.primary-nav li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.primary-nav li a {
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-    color: black;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-
-.secondary-nav {
-    list-style: none;
-}
-
-.secondary-nav a {
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-    color: black;
-    font-size: 1.3em;
-    font-weight: bold;
-} */
 
 @media only screen and (max-width: 780px){
     .image-container{
