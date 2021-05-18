@@ -547,6 +547,16 @@ color: white;
     border-color: black;
 }
 
+.checkout-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+}
+
 .form-page {
 width: 100%;
 display: flex;
@@ -563,6 +573,12 @@ min-height: 100vh;
     padding-top: 50px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-box{
