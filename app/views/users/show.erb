@@ -7,12 +7,10 @@
     </div>
     <div class="image-container">
         <% @user.images.each do |user|%>
-        <!--<img src = <%= user.url %> width="300" height="300" >-->
         <div class="image">
         <%= link_to image_tag(user.url), user%>
         </div>
         <%end%>
-        <hr>
     </div>
 </div>
 
