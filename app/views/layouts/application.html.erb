@@ -36,9 +36,10 @@
                 <a class="logo" href="/">Quick<span>Pix</span></a>
             </div>
             <div>
-            <a href="/images">Explore</a>
+            <a id="explore" href="/images">Explore</a>
             <%= link_to "Logout", logout_path, method: "delete" %>
              <%= link_to current_user.name, user_path(current_user.id) %>
+             <a id="cart-icon" href="/order_images"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
                     <div class="page-layout">

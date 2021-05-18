@@ -4,9 +4,9 @@
      <div class="image-details">
 
         <% @order_images.each do |o|%>
-        <div>
+        <div class="details-box">
                 <%= image_tag(o.image.url, :size => "300x400")%>
-        </div>
+        
         <div class="table-responsive">
              <table class="table">
                 <tr>
@@ -25,6 +25,7 @@
                 <%= link_to "Remove from cart", o ,method: :delete, class: "btn btn-danger"%>
                 <%= link_to "Checkout", new_order_path, class: "btn btn-success" %><br><br>
                 <%= link_to "Shop for more images", images_path, class: "btn btn-outline-primary"%>
+        </div>
         </div>
         <%end%>
      </div>

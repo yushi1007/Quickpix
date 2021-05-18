@@ -1,11 +1,11 @@
 <!--<h1> <%= @image.name %> </h1>-->
 <div>
     <div class="image-details">
-        <div>
+        <div class="details-box">
             <img src= <%= @image.url %> ><br>
             Photo Submitted by: <%=link_to @image.user.name, user_path(@image.user_id)%>
-        </div>
-        <div class="col-sm-6">
+        
+        <div class="details">
             <h1><%=@image.name%></h1>
             <div class="table-responsive">
               <table class="table">
@@ -30,6 +30,7 @@
                        :image_id => @image.id, 
                        :order_id => @order.id,
                        :method => "post"}, class: "btn btn-primary btn-lg"%>
+        </div>
     </div>                 
 </div>
 <!--<%= @image.description %>-->
