@@ -4,7 +4,7 @@
         <h1>Thank You For Your Order!</h1>
 
         <h1>Confirmation Number: #<%=SecureRandom.alphanumeric(10)%></h1><br><br>
-    <div class="btn">
+    <div class="btn-box">
         <%= link_to "Explore More", images_path, class: "btn btn-outline-primary"%>
         <%= link_to "Return To Cart", order_images_path, class:"btn btn-outline-success" %>
     </div>

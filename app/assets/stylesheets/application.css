@@ -608,14 +608,14 @@ min-height: 100vh;
     padding: 5px 10px;
 }
 
-.btn {
+.btn-box {
     justify-content: center;
     align-items: center;
     display: flex;
     margin-bottom: 50vh;
 }
 
-.btn a{
+.btn-box a{
     margin-right: 20px;
 }
 
