@@ -4,6 +4,8 @@ Quickpix is a place helps artists to sell their photos
 
 ### [Backend](http://sungithub.com/yushi1007/QuickPix/tree/main/app/views) | [Frontend](https://github.com/yushi1007/QuickPix) | [Website](https://calm-stream-16658.herokuapp.com/)
 
+Thank you for checking out our sites!
+
 # Technologies Used
 
 - Ruby on Rails
