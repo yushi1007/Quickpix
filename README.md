@@ -4,7 +4,9 @@ Quickpix is a place helps artists to sell their photos
 
 ### [Backend](http://sungithub.com/yushi1007/QuickPix/tree/main/app/views) | [Frontend](https://github.com/yushi1007/QuickPix) | [Website](https://calm-stream-16658.herokuapp.com/)
 
-Thank you for checking out our sites!
+## Support
+
+Please give a ⭐️ if you like this project, thank you for checking out our sites!
 
 # Technologies Used
 
@@ -28,7 +30,3 @@ Thank you for checking out our sites!
 - Linked:[LinkedIn](https://www.linkedin.com/in/yushi95/)
 - Github:[@DOUGKERZNER](https://github.com/DkFresh89) 
 - Linked:[LinkedIn](https://www.linkedin.com/in/douglas-kerzner)
-
-## Support
-
-Please give a ⭐️ if you like this project, thank you!
