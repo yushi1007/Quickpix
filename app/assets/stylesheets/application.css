@@ -473,6 +473,21 @@ color: white;
      align-items: center;
  }
 
+ .link-btn {
+    padding: 5vh 0 0 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .link-btn a {
+    padding-left: 10px;
+    margin-left: 10px;
+ }
+
+
+
  .image-container{
      height: auto;
      padding: 0 25px 0 25px;

@@ -1,9 +1,10 @@
 
 <div class="image-page">
-    <h1><%= @user.name %>'s images</h1>
-        <%= link_to "My Account", edit_user_path(@user)%>
-        <%= link_to "Upload", new_image_path %>
-        <%= link_to "Explore", images_path%>
+    <div class="link-btn">
+        <h2><%= @user.name %>'s images</h2>
+        <%= link_to "My Account", edit_user_path(@user), class:"btn btn-info"%>
+        <%= link_to "Upload", new_image_path, class:"btn btn-primary" %>
+    </div>
     <div class="image-container">
         <% @user.images.each do |user|%>
         <!--<img src = <%= user.url %> width="300" height="300" >-->
