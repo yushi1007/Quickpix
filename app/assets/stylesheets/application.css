@@ -608,6 +608,17 @@ min-height: 100vh;
     padding: 5px 10px;
 }
 
+.btn {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 50vh;
+}
+
+.btn a{
+    margin-right: 20px;
+}
+
 @media only screen and (max-width: 780px){
     .image-container{
         grid-template-columns: repeat(2, 1fr);
