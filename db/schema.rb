@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_05_18_032959) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -38,6 +41,15 @@ ActiveRecord::Schema.define(version: 2021_05_18_032959) do
     t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "photo_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["photo_id"], name: "index_favorites_on_photo_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "image_tags", force: :cascade do |t|
@@ -78,6 +90,23 @@ ActiveRecord::Schema.define(version: 2021_05_18_032959) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.integer "ownerId"
+    t.string "camera"
+    t.string "aperture"
+    t.string "shutter_speed"
+    t.string "iso"
+    t.string "lens"
+    t.string "location"
+    t.string "time"
+    t.string "category"
+    t.string "weather"
+    t.string "notes"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string "tag"
     t.datetime "created_at", precision: 6, null: false
@@ -94,6 +123,7 @@ ActiveRecord::Schema.define(version: 2021_05_18_032959) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "favorites", "photos"
   add_foreign_key "image_tags", "images"
   add_foreign_key "image_tags", "tags"
   add_foreign_key "images", "users"
