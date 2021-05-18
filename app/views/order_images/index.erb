@@ -1,13 +1,32 @@
-<h1>Cart:</h1>
+<div class="cart-page">
+        <h1>Shopping Cart:</h1>
+        <hr>
+     <div class="image-details">
 
-<% @order_images.each do |o|%>
-        <%= image_tag(o.image.url, :size => "300x400")%>
-        <h6>Name: <%= o.image.name%></h6>
-        <h6>Description: <%= o.image.description%></h6>
-        <h6>Price: <%= o.image.price%></h6>
-<%= link_to "Remove from cart", o ,method: :delete%>
-<%= link_to "Checkout", new_order_path %><br><br>
-
-<%end%>
-
-<%= link_to "Shop for more images", images_path%>
+        <% @order_images.each do |o|%>
+        <div class="details-box">
+                <%= image_tag(o.image.url, :size => "300x400")%>
+        
+        <div class="table-responsive">
+             <table class="table">
+                <tr>
+                    <td><h6>Name: </h6></td>
+                    <td><%= o.image.name%></td>
+                </tr>
+                <tr>
+                    <td><h6>Description: </h6></td>
+                    <td><%= o.image.description%></td>
+                </tr>
+                <tr>
+                    <td><h6>Price: </h6></td>
+                    <td>$<%= o.image.price%></td>
+                </tr>
+             </table>
+                <%= link_to "Remove from cart", o ,method: :delete, class: "btn btn-danger"%>
+                <%= link_to "Checkout", new_order_path, class: "btn btn-success" %><br><br>
+                <%= link_to "Shop for more images", images_path, class: "btn btn-outline-primary"%>
+        </div>
+        </div>
+        <%end%>
+     </div>
+</div>

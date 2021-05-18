@@ -1,33 +1,30 @@
-<h1> New Order Form: </h1>
-
-<head>New Order</head><br><br>
-
-
-<form>
-
+<div class="checkout-page">
+    <div class="form-box">
+    <h1>New Order</h1><br>
+    <form>
             <label> Name: </label>
-            <input type="text" name="name"><br><br>
+            <input type="text" name="name" class="input-box"><br><br>
             
             <label>Address: </label>
-            <input type="text" name="Address"><br><br>
+            <input type="text" name="Address" class="input-box"><br><br>
 
             <label>Zip: </label>
-            <input type="number" name="Zip">
+            <input type="number" name="Zip" class="input-box">
             <label>State:</label>
-            <input type="text" name="State">
+            <input type="text" name="State" class="input-box">
             <br><br>
 
             <label>Credit Card Number:</label>
-            <input type="number" name="Credit Card Number"><br><br>
+            <input type="number" name="Credit Card Number" class="input-box"><br><br>
             <label>YYYY-MM</label>
-            <input type="month" name="YYYY-MM">
+            <input type="month" name="YYYY-MM" class="input-box">
             <label>CVV</label>
-            <input type="number" name="CVV" min="111" max="999"><br><br>
+            <input type="number" name="CVV" min="111" max="999" class="input-box"><br><br>
 
             <label>Coupon Code:</label> 
-            <input type="text" name="Coupon Code"><br><br>
-
-</form>
-
-<%= button_to "Submit Order", clean_path, :method => :delete%>
-<%= link_to "Return To Cart", order_images_path %>
+            <input type="text" name="Coupon Code" class="input-box"><br><br>
+    </form>
+            <%= button_to "Submit Order", clean_path, :method => :delete, class:"btn btn-success"%>
+            <%= link_to "Return To Cart", order_images_path, class:"btn btn-outline-success" %>
+    </div>
+</div>

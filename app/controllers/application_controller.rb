@@ -1,12 +1,16 @@
 class ApplicationController < ActionController::Base
         # Allows current_user and logged_in? to be called in the html.erb files
+        # helper_method :current_user, :logged_in?
         helper_method :current_user, :logged_in?
-    
         # Every action in the controller must go through this check
         # Except for the ones with `skip_before_action :authorized`
 
         # Any instance variable saved carries on through after a before_action
-        before_action :authorized
+        #before_action 
+        before_action :authorized, except: :index
+        def index
+
+        end
 
         def current_user
                 #byebug

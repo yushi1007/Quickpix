@@ -6,7 +6,6 @@ class ImagesController < ApplicationController
     def show
         @image = Image.find(params[:id])
         @order = Order.last
-        # @users = User.all 
     end
 
     def new
@@ -18,14 +17,8 @@ class ImagesController < ApplicationController
     def create
         user = User.find(session[:user_id])
         image = user.images.create(image_params) 
-        # if image.valid?
-        # redirect_to user_path(user)
-        # else
-        # flash[:errors] = image.errors.full_messages
-      
         redirect_to user_path(user) 
     end
-
 
     private
 

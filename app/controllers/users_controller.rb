@@ -2,7 +2,6 @@ class UsersController < ApplicationController
     skip_before_action :authorized, only: [:login, :handle_login, :new, :create]
 
 
-
     def show
       @user = User.find(params[:id])
       @error_message = flash[:error_message]
@@ -21,14 +20,14 @@ class UsersController < ApplicationController
         @order = Order.create(ordered: false, user_id: @user.id)
         redirect_to user_path(@user)
     else 
-      flash[:error_message] = "Incorrect username or password. Please try again."
+      flash[:error_message] = "Incorrect username or password"
       redirect_to login_path
     end 
 end
 
     def logout
         session[:user_id] = nil
-        Order.last.destroy
+        #Order.last.destroy
         redirect_to login_path
     end
 

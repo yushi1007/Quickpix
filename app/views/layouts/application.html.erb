@@ -2,30 +2,74 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <title>Quickpix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+  
   <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
     <h5 class="text-white h4">Collapsed content</h5>
     <span class="text-muted">Toggleable via the navbar brand.</span>
   </div>
 </div>
-
-
+           <div class="navbar">
+            <div>
+                <a class="logo" href="/">Quick<span>Pix</span></a>
+            </div>
+            <div>
+            <a href="/login">Sign In</a>
+            <%= link_to "Sign Up", new_user_path %>
+            </div>
+        </div>
+    <%# <div class="text-right mb-3">
+   <%= button_to "Logout", "/logout", method: "delete", class: "btn btn-dark float-right" %><%#</div> %>
 
   <!-- Navbar content -->
   <% if logged_in? %>
-  <div class="text-right mb-3">
-   <%= button_to "Logout", "/logout", method: "delete", class: "btn btn-dark float-right" %></div></nav>
-          <p><%= current_user.name %></p> 
+        <div class="navbar">
+            <div>
+                <a class="logo" href="/">Quick<span>Pix</span></a>
+            </div>
+            <div>
+            <a id="explore" href="/images">Explore</a>
+            <%= link_to "Logout", logout_path, method: "delete" %>
+             <%= link_to current_user.name, user_path(current_user.id) %>
+             <a id="cart-icon" href="/order_images"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+                    <div class="page-layout">
+            <p>Welcome <%= current_user.name %></p>
+                 <%# <p></p> %>
+            </div> 
             <% else %>
-                 <p>You are NOT logged in </p>            
-            <% end %>
-  <div class="container">
-    <%= yield %>
-  </div></body>
 
+            <% end %>
+           
+         
+    <%= yield %>
+  </body>
+           <footer>
+                <div class="foot-content">
+                    <h4>Quick<span>Pix</span></h4>
+                    <p>Thank You for Using QuickPix</p>
+                    <p>A Place To Sell Your Photos</p>
+                    <div class="foot-text">
+                    <h5>Designed by:</h5>
+                    </div>
+                    <ul class="socials">
+                    <li><a href="https://github.com/yushi1007">Yu Shi</a></li>
+                    <li><a href="https://yushi95.medium.com/"><i class="fa fa-medium"></i></a></li>
+                    <li><a href="linkedin.com/in/yushi95"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/yushi.95"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/DkFresh89">Doug Kerzner</a></li>
+                    <li><a href="https://dev.to/dkfresh89"><i class="fab fa-dev"></i></a></li>
+                    <li><a href="linkedin.com/in/douglas-kerzner-978b8335"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
 </html>
