@@ -2,7 +2,7 @@
 
 Quickpix is a place helps artists to sell their photos
 
-### [Backend](http://sungithub.com/yushi1007/QuickPix/tree/main/app/views) | [Frontend](https://github.com/yushi1007/QuickPix) | [Website](https://quickpix-yd.herokuapp.com/)
+### [Backend](http://sungithub.com/yushi1007/QuickPix/tree/main/app/views) | [Frontend](https://github.com/yushi1007/QuickPix) | [Website](https://quickpix-yd.herokuapp.com/) | [Demo](https://www.loom.com/share/bb90c26da6fc4cf294de2159e2173dce)
 
 ## Support
 
